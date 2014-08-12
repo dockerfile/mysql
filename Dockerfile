@@ -12,8 +12,9 @@ RUN \
   apt-get update && \
   apt-get install -y mysql-server && \
   sed -i 's/^\(bind-address\s.*\)/# \1/' /etc/mysql/my.cnf && \
+  sed -i 's/^\(log_error\s.*\)/# \1/' /etc/mysql/my.cnf && \
   echo "mysqld_safe &" > /tmp/config && \
-  echo "LOOP=1; while [[ LOOP -ne 0 ]]; do sleep 1; mysql -uroot -e 'status' > /dev/null 2>&1; LOOP=$?; done" >> /tmp/config && \
+  echo "sleep 5" >> /tmp/config && \
   echo "mysql -e 'GRANT ALL PRIVILEGES ON *.* TO \"root\"@\"%\";'" >> /tmp/config && \
   bash /tmp/config && \
   rm -f /tmp/config

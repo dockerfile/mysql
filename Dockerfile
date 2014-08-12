@@ -10,6 +10,8 @@ FROM dockerfile/ubuntu
 # Install MySQL.
 RUN \
   apt-get update && \
+  echo -e "#!/bin/sh\nexit 101" > /usr/sbin/policy-rc.d && \
+  chmod a+x /usr/sbin/policy-rc.d && \
   apt-get install -y mysql-server && \
   sed -i 's/^\(bind-address\s.*\)/# \1/' /etc/mysql/my.cnf && \
   sed -i 's/^\(log_error\s.*\)/# \1/' /etc/mysql/my.cnf && \

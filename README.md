@@ -1,7 +1,7 @@
 ## MySQL Dockerfile
 
 
-This repository contains **Dockerfile** of [MySQL](http://dev.mysql.com/) for [Docker](https://www.docker.io/)'s [trusted build](https://index.docker.io/u/dockerfile/mysql/) published to the public [Docker Registry](https://index.docker.io/).
+This repository contains **Dockerfile** of [MySQL](http://dev.mysql.com/) for [Docker](https://www.docker.com/)'s [automated build](https://registry.hub.docker.com/u/dockerfile/mysql/) published to the public [Docker Hub Registry](https://registry.hub.docker.com/).
 
 
 ### Dependencies
@@ -11,9 +11,9 @@ This repository contains **Dockerfile** of [MySQL](http://dev.mysql.com/) for [D
 
 ### Installation
 
-1. Install [Docker](https://www.docker.io/).
+1. Install [Docker](https://www.docker.com/).
 
-2. Download [trusted build](https://index.docker.io/u/dockerfile/mysql/) from public [Docker Registry](https://index.docker.io/): `docker pull dockerfile/mysql`
+2. Download [automated build](https://registry.hub.docker.com/u/dockerfile/mysql/) from public [Docker Hub Registry](https://registry.hub.docker.com/): `docker pull dockerfile/mysql`
 
    (alternatively, you can build an image from Dockerfile: `docker build -t="dockerfile/mysql" github.com/dockerfile/mysql`)
 

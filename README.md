@@ -24,10 +24,6 @@ This repository contains **Dockerfile** of [MySQL](http://dev.mysql.com/) for [D
 
     docker run -d --name mysql -p 3306:3306 dockerfile/mysql
 
-#### Run `mysqld-safe` with persistent data directory.
-
-    docker run -d -p 3306:3306 -v <data-dir>:/data --name mysql dockerfile/mysql
-
 #### Run `mysql`
 
     docker run -it --rm --link mysql:mysql dockerfile/mysql bash -c 'mysql -h $MYSQL_PORT_3306_TCP_ADDR'

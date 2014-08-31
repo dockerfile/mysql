@@ -21,7 +21,7 @@ RUN \
   rm -f /tmp/config
 
 # Define mountable directories.
-VOLUME ["/data", "/etc/mysql", "/var/lib/mysql"]
+VOLUME ["/etc/mysql", "/var/lib/mysql"]
 
 # Define working directory.
 WORKDIR /data
